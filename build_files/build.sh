@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # Tagged release
-dnf5 remove gnome-\*
+dnf5 remove gnome-\* -y
 dnf5 install -y @cosmic-desktop-environment
 
 # Nightly release
