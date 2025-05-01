@@ -11,8 +11,57 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # Tagged release
-dnf5 remove gnome-\* -y
-dnf5 install -y @cosmic-desktop-environment
+dnf5 remove -y gnome-\* --setopt=install_weak_deps=False && \
+dnf5 clean all && \
+rm -rf /var/cache/dnf/*
+
+dnf5 install -y \
+    cosmic-applets \
+    cosmic-bg \
+    cosmic-comp \
+    cosmic-edit \
+    cosmic-files \
+    cosmic-greeter \
+    cosmic-launcher \
+    cosmic-notifications \
+    cosmic-osd \
+    cosmic-panel \
+    cosmic-player \
+    cosmic-screenshot \
+    cosmic-session \
+    cosmic-settings \
+    cosmic-settings-daemon \
+    cosmic-store \
+    cosmic-term \
+    cosmic-workspaces \
+    xdg-desktop-portal-cosmic \
+    cosmic-icon-theme \
+    pop-icon-theme \
+    --setopt=install_weak_deps=False && \
+dnf5 clean all && \
+rm -rf /var/cache/dnf/*
+
+dnf5 install -y \
+    qt6-qtbase-gui \
+    qt6-qtdeclarative \
+    qt6-qtsvg \
+    qt6-qtwayland \
+    kf6-kcoreaddons \
+    kf6-kconfig \
+    kf6-ki18n \
+    kf6-kwidgetsaddons \
+    kf6-kwindowsystem \
+    kf6-kirigami \
+    kf6-kiconthemes \
+    breeze-icon-theme \
+    --setopt=install_weak_deps=False && \
+dnf5 clean all && \
+rm -rf /var/cache/dnf/*
+
+dnf5 install -y @cosmic-desktop-environment --setopt=install_weak_deps=False && \
+dnf5 clean all && \
+rm -rf /var/cache/dnf/*
+
 
 # Nightly release
 # dnf5 copr enable ryanabx/cosmic-epoch
