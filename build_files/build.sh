@@ -71,6 +71,8 @@ dnf5 install -y \
 # dnf5 copr enable ryanabx/cosmic-epoch
 # dnf5 install cosmic-desktop
 
+systemctl disable display-manager && systemctl enable cosmic-greeter.service -f
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
