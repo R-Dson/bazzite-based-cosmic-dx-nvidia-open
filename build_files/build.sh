@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # Tagged release
-dnf5 remove -y gnome-\* --setopt=install_weak_deps=False && \
+#dnf5 remove -y gnome-\* --setopt=install_weak_deps=False && \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
@@ -36,8 +36,8 @@ dnf5 install -y \
     cosmic-workspaces \
     xdg-desktop-portal-cosmic \
     cosmic-icon-theme \
-    pop-icon-theme \
-    --setopt=install_weak_deps=False && \
+    pop-icon-theme
+#    --#setopt=install_weak_deps=False && \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
@@ -53,12 +53,12 @@ dnf5 install -y \
     kf6-kwindowsystem \
     kf6-kirigami \
     kf6-kiconthemes \
-    breeze-icon-theme \
-    --setopt=install_weak_deps=False && \
+    breeze-icon-theme
+#    --setopt=install_weak_deps=False && \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
-dnf5 install -y @cosmic-desktop-environment --setopt=install_weak_deps=False && \
+dnf5 install -y @cosmic-desktop-environment # --setopt=install_weak_deps=False && \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
