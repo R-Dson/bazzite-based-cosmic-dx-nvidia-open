@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # Tagged release
-#dnf5 remove -y gnome-\* --setopt=install_weak_deps=False && \
+
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
@@ -37,7 +37,7 @@ dnf5 install -y \
     xdg-desktop-portal-cosmic \
     cosmic-icon-theme \
     pop-icon-theme
-#    --#setopt=install_weak_deps=False && \
+
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
@@ -54,14 +54,18 @@ dnf5 install -y \
     kf6-kirigami \
     kf6-kiconthemes \
     breeze-icon-theme
-#    --setopt=install_weak_deps=False && \
+
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
-dnf5 install -y @cosmic-desktop-environment # --setopt=install_weak_deps=False && \
+dnf5 install -y @cosmic-desktop-environment
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
+# Other packages I use
+dnf5 install -y \
+    neovim \
+    ncdu
 
 # Nightly release
 # dnf5 copr enable ryanabx/cosmic-epoch
