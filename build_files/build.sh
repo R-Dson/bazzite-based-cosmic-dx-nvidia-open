@@ -65,8 +65,19 @@ rm -rf /var/cache/dnf/*
 # Other packages I use
 dnf5 install -y \
     neovim \
-    ncdu
+    ncdu \
+    NetworkManager-tui
 
+flatpak install --system -y \
+    app/app.zen_browser.zen \
+    app/dev.vencord.Vesktop \
+    app/com.github.wwmm.easyeffects \
+    app/org.gustavoperedo.FontDownloader \
+    app/org.signal.Signal \
+    app/io.github.jorchube.monitorets \
+    app/com.heroicgameslauncher.hgl \
+    app/net.davidotek.pupgui2
+    
 # Nightly release
 # dnf5 copr enable ryanabx/cosmic-epoch
 # dnf5 install cosmic-desktop
