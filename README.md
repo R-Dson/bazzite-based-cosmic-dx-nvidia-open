@@ -7,7 +7,7 @@ A collection of [Cosmic](https://github.com/pop-os/cosmic-epoch) desktop images 
 <details>
 <summary>
 
-- **bazzite-based-cosmic-nvidia**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's proprietary drivers
+**bazzite-based-cosmic-nvidia**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's proprietary drivers
 </summary>
 
 ```bash
@@ -19,7 +19,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/r-dson/bazzite-based-cosm
 <details>
 <summary>
 
-- **bazzite-based-cosmic-nvidia-open**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's partially open-source drivers
+**bazzite-based-cosmic-nvidia-open**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's partially open-source drivers
 </summary>
 
 ```bash
@@ -31,7 +31,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/r-dson/bazzite-based-cosm
 <details>
 <summary>
 
-- **bazzite-based-cosmic-gnome-nvidia**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers
+**bazzite-based-cosmic-gnome-nvidia**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers
 </summary>
 
 ```bash
@@ -44,7 +44,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/r-dson/bazzite-based-cosm
 <summary>
 
 
-- **bazzite-based-cosmic-gnome-nvidia-open**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers
+**bazzite-based-cosmic-gnome-nvidia-open**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers
 </summary>
 
 ```bash
@@ -58,7 +58,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/r-dson/bazzite-based-cosm
 <details>
 <summary>
 
-- **bazzite-based-cosmic-dx-nvidia-open**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's partially open-source drivers **with developer tools**
+**bazzite-based-cosmic-dx-nvidia-open**: Bazzite-based Cosmic image with KDE desktop and NVIDIA's partially open-source drivers **with developer tools**
 </summary>
 
 ```bash
@@ -71,7 +71,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/r-dson/bazzite-based-cosm
 <summary>
 
 
-- **bazzite-based-cosmic-dx-gnome-nvidia-open**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers **with developer tools**
+**bazzite-based-cosmic-dx-gnome-nvidia-open**: Bazzite-based Cosmic image with GNOME desktop and NVIDIA's partially open-source drivers **with developer tools**
 </summary>
 
 ```bash
