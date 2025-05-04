@@ -30,10 +30,22 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          # DX variants
           - base_image: "ghcr.io/ublue-os/bazzite-dx-nvidia-open:latest"
-            image_name: "cosmic-dx-nvidia-open"
+            image_name: "bazzite-based-cosmic-dx-nvidia-open"
           - base_image: "ghcr.io/ublue-os/bazzite-dx-gnome-nvidia-open:latest"
-            image_name: "cosmic-dx-gnome-nvidia-open"
+            image_name: "bazzite-based-cosmic-dx-gnome-nvidia-open"
+
+          # Regular variants
+          - base_image: "ghcr.io/ublue-os/bazzite-nvidia:latest"
+            image_name: "bazzite-based-cosmic-nvidia"
+          - base_image: "ghcr.io/ublue-os/bazzite-nvidia-open:latest"
+            image_name: "bazzite-based-cosmic-nvidia-open"
+
+          - base_image: "ghcr.io/ublue-os/bazzite-gnome-nvidia:latest"
+            image_name: "bazzite-based-cosmic-gnome-nvidia"
+          - base_image: "ghcr.io/ublue-os/bazzite-gnome-nvidia-open:latest"
+            image_name: "bazzite-based-cosmic-gnome-nvidia-open"
 
     permissions:
       contents: read
