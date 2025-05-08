@@ -48,7 +48,7 @@ rm -rf /var/cache/dnf/*
 #    grep -vE '^(glibc-all-langpacks|another-critical-package)$' | \
 #    xargs dnf5 remove -y
 
-sudo dnf5 remove plasma-desktop -y
+dnf5 remove plasma-desktop -y
 
 #dnf5 install -y \
 #    qt6-qtbase-gui \
