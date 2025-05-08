@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 # Tagged release
 
-dnf5 remove xwaylandvideobridge
+dnf5 remove -y xwaylandvideobridge
 
 # Gets the mandatory packages installed in kde-desktop and removes them.
 dnf5 group info kde-desktop | \
