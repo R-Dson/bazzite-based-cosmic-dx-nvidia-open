@@ -41,19 +41,22 @@ dnf5 install -y \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
-dnf5 install -y \
-    qt6-qtbase-gui \
-    qt6-qtdeclarative \
-    qt6-qtsvg \
-    qt6-qtwayland \
-    kf6-kcoreaddons \
-    kf6-kconfig \
-    kf6-ki18n \
-    kf6-kwidgetsaddons \
-    kf6-kwindowsystem \
-    kf6-kirigami \
-    kf6-kiconthemes \
-    breeze-icon-theme
+dnf5 group remove kde-software-development
+#dnf5 remove xwaylandvideobridge
+
+#dnf5 install -y \
+#    qt6-qtbase-gui \
+#    qt6-qtdeclarative \
+#    qt6-qtsvg \
+#    qt6-qtwayland \
+#    kf6-kcoreaddons \
+#    kf6-kconfig \
+#    kf6-ki18n \
+#    kf6-kwidgetsaddons \
+#    kf6-kwindowsystem \
+#    kf6-kirigami \
+#    kf6-kiconthemes \
+#    breeze-icon-theme
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
