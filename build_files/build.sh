@@ -12,6 +12,30 @@ set -ouex pipefail
 # this installs a package from fedora repos
 # Tagged release
 
+dnf5 remove xwaylandvideobridge
+
+# Gets the mandatory packages installed in kde-desktop and removes them.
+dnf5 group info kde-desktop | \
+    sed -n '/^Mandatory packages\s*:/,/^\(Default\|Optional\) packages\s*:/ {
+        /^\(Default\|Optional\) packages\s*:/q  # Quit if we hit Default/Optional header
+        s/^.*:[[:space:]]*//p
+    }' | \
+    xargs dnf5 remove -y
+
+#dnf5 install -y \
+#    qt6-qtbase-gui \
+#    qt6-qtdeclarative \
+#    qt6-qtsvg \
+#    qt6-qtwayland \
+#    kf6-kcoreaddons \
+#    kf6-kconfig \
+#    kf6-ki18n \
+#    kf6-kwidgetsaddons \
+#    kf6-kwindowsystem \
+#    kf6-kirigami \
+#    kf6-kiconthemes \
+#    breeze-icon-theme
+
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
@@ -40,38 +64,6 @@ dnf5 install -y \
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
-#dnf5 remove xwaylandvideobridge
-
-# Gets the packages installed in kde-desktop and removes them. Excluding packages
-#dnf5 group info kde-desktop | \
-#    grep -oP '^(?:(?:Mandatory|Default|Optional) packages\s*:|\s+:)\s*\K[^\s]+' | \
-#    grep -vE '^(glibc-all-langpacks|another-critical-package)$' | \
-#    xargs dnf5 remove -y
-
-dnf5 group info kde-desktop | \
-    sed -n '/^Mandatory packages\s*:/,/^\(Default\|Optional\) packages\s*:/ {
-        /^\(Default\|Optional\) packages\s*:/q  # Quit if we hit Default/Optional header
-        s/^.*:[[:space:]]*//p
-    }' | \
-    xargs dnf5 remove -y
-
-
-#dnf5 remove plasma-desktop -y
-
-
-#dnf5 install -y \
-#    qt6-qtbase-gui \
-#    qt6-qtdeclarative \
-#    qt6-qtsvg \
-#    qt6-qtwayland \
-#    kf6-kcoreaddons \
-#    kf6-kconfig \
-#    kf6-ki18n \
-#    kf6-kwidgetsaddons \
-#    kf6-kwindowsystem \
-#    kf6-kirigami \
-#    kf6-kiconthemes \
-#    breeze-icon-theme
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
