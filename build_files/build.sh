@@ -48,7 +48,16 @@ rm -rf /var/cache/dnf/*
 #    grep -vE '^(glibc-all-langpacks|another-critical-package)$' | \
 #    xargs dnf5 remove -y
 
-dnf5 remove plasma-desktop -y
+dnf5 group info kde-desktop | \
+    sed -n '/^Mandatory packages\s*:/,/^\(Default\|Optional\) packages\s*:/ {
+        /^\(Default\|Optional\) packages\s*:/q  # Quit if we hit Default/Optional header
+        s/^.*:[[:space:]]*//p
+    }' | \
+    xargs dnf5 remove -y
+
+
+#dnf5 remove plasma-desktop -y
+
 
 #dnf5 install -y \
 #    qt6-qtbase-gui \
