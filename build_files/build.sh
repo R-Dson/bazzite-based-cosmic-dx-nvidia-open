@@ -42,8 +42,13 @@ dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 #dnf5 remove xwaylandvideobridge
 
-# Gets the packages installed in kde-desktop and removes them.
-dnf5 group info kde-desktop | grep -oP '^(?:(?:Mandatory|Default|Optional) packages\s*:|\s+:)\s*\K[^\s]+' | xargs dnf5 remove -y
+# Gets the packages installed in kde-desktop and removes them. Excluding packages
+#dnf5 group info kde-desktop | \
+#    grep -oP '^(?:(?:Mandatory|Default|Optional) packages\s*:|\s+:)\s*\K[^\s]+' | \
+#    grep -vE '^(glibc-all-langpacks|another-critical-package)$' | \
+#    xargs dnf5 remove -y
+
+sudo dnf5 remove plasma-desktop -y
 
 #dnf5 install -y \
 #    qt6-qtbase-gui \
