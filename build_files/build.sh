@@ -41,16 +41,20 @@ rm -rf /var/cache/dnf/*
 
 dnf5 install -y \
     cosmic-applets \
+    cosmic-app-library \
     cosmic-bg \
     cosmic-comp \
+    cosmic-config-fedora \
     cosmic-edit \
     cosmic-files \
     cosmic-greeter \
+    cosmic-idle \
     cosmic-launcher \
     cosmic-notifications \
     cosmic-osd \
     cosmic-panel \
     cosmic-player \
+    cosmic-randr \
     cosmic-screenshot \
     cosmic-session \
     cosmic-settings \
@@ -60,7 +64,8 @@ dnf5 install -y \
     cosmic-workspaces \
     xdg-desktop-portal-cosmic \
     cosmic-icon-theme \
-    pop-icon-theme
+    pop-icon-theme \
+    fedora-release-identity-cosmic
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
