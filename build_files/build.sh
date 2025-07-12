@@ -64,8 +64,7 @@ dnf5 install -y \
     cosmic-workspaces \
     xdg-desktop-portal-cosmic \
     cosmic-icon-theme \
-    pop-icon-theme \
-    fedora-release-identity-cosmic
+    pop-icon-theme
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
