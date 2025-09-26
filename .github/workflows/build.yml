@@ -33,7 +33,7 @@ jobs:
           # DX variants
           - base_image: "ghcr.io/ublue-os/bazzite-dx-nvidia:latest"
             image_name: "bazzite-based-cosmic-dx-nvidia"
-          - base_image: "ghcr.io/ublue-os/bazzite-dx-gnome-nvidia:latest"
+          - base_image: "ghcr.io/ublue-os/bazzite-dx-nvidia-gnome:latest"
             image_name: "bazzite-based-cosmic-dx-gnome-nvidia"
 
           # Regular variants
