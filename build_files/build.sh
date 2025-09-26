@@ -39,32 +39,7 @@ dnf5 group info kde-desktop | \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
-dnf5 install -y \
-    cosmic-applets \
-    cosmic-app-library \
-    cosmic-bg \
-    cosmic-comp \
-    cosmic-config-fedora \
-    cosmic-edit \
-    cosmic-files \
-    cosmic-greeter \
-    cosmic-idle \
-    cosmic-launcher \
-    cosmic-notifications \
-    cosmic-osd \
-    cosmic-panel \
-    cosmic-player \
-    cosmic-randr \
-    cosmic-screenshot \
-    cosmic-session \
-    cosmic-settings \
-    cosmic-settings-daemon \
-    cosmic-store \
-    cosmic-term \
-    cosmic-workspaces \
-    xdg-desktop-portal-cosmic \
-    cosmic-icon-theme \
-    pop-icon-theme
+sudo dnf5 group install -y cosmic-desktop cosmic-desktop-apps
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
