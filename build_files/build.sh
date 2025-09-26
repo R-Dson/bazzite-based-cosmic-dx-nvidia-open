@@ -39,7 +39,7 @@ dnf5 group info kde-desktop | \
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
 
-sudo dnf5 group install -y cosmic-desktop cosmic-desktop-apps
+dnf5 group install -y cosmic-desktop cosmic-desktop-apps
 
 dnf5 clean all && \
 rm -rf /var/cache/dnf/*
